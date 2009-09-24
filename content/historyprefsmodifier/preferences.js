@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', function() {
 			var historyDays = document.getElementById('historyDays');
 			historyDays.setAttribute('onsynctopreference', <![CDATA[
 				var historyDays = document.getElementById('historyDays');
-				var value = parseInt(maxPref.defaultValue);
+				var value = parseInt(historyDays.defaultValue);
 				var maxPref = document.getElementById('browser.history_expire_days');
 				var minPref = document.getElementById('browser.history_expire_days_min');
 				if (maxPref.defaultValue == minPref.defaultValue ||
