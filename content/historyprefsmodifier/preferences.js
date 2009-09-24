@@ -15,14 +15,13 @@ window.addEventListener('DOMContentLoaded', function() {
 			var historyDays = document.getElementById('historyDays');
 			historyDays.setAttribute('onsynctopreference', <![CDATA[
 				var historyDays = document.getElementById('historyDays');
-				var value = parseInt(historyDays.defaultValue);
+				var value = parseInt(historyDays.value);
 				var maxPref = document.getElementById('browser.history_expire_days');
 				var minPref = document.getElementById('browser.history_expire_days_min');
 				if (maxPref.defaultValue == minPref.defaultValue ||
 					parseInt(maxPref.value) < value) {
 					maxPref.value = value;
 				}
-				return value;
 			]]>);
 		}, 0);
 	}, false);
