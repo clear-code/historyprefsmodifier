@@ -1,0 +1,3 @@
+content	historyprefsmodifier	jar:chrome/historyprefsmodifier.jar!/content/historyprefsmodifier/
+
+overlay	chrome://browser/content/preferences/preferences.xul	chrome://historyprefsmodifier/content/preferences.xul
