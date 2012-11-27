@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', function() {
 			gPrivacyPane.updatePrivacyMicroControls();
 
 			var historyDays = document.getElementById('historyDays');
+			if (!historyDays) return;
 			historyDays.setAttribute('onsynctopreference', <![CDATA[
 				var historyDays = document.getElementById('historyDays');
 				var value = parseInt(historyDays.value);
