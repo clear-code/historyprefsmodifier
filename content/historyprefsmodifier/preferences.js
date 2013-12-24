@@ -13,17 +13,17 @@ window.addEventListener('DOMContentLoaded', function() {
 			gPrivacyPane.updatePrivacyMicroControls();
 
 			var historyDays = document.getElementById('historyDays');
-			if (!historyDays) return;
-			historyDays.setAttribute('onsynctopreference', <![CDATA[
-				var historyDays = document.getElementById('historyDays');
-				var value = parseInt(historyDays.value);
-				var maxPref = document.getElementById('browser.history_expire_days');
-				var minPref = document.getElementById('browser.history_expire_days_min');
-				if (maxPref.defaultValue == minPref.defaultValue ||
-					parseInt(maxPref.value) < value) {
-					maxPref.value = value;
-				}
-			]]>);
+			if (historyDays) // for too old Firefox
+				historyDays.setAttribute('onsynctopreference', [
+					"var historyDays = document.getElementById('historyDays');",
+					"var value = parseInt(historyDays.value);",
+					"var maxPref = document.getElementById('browser.history_expire_days');",
+					"var minPref = document.getElementById('browser.history_expire_days_min');",
+					"if (maxPref.defaultValue == minPref.defaultValue ||",
+					"	parseInt(maxPref.value) < value) {",
+					"	maxPref.value = value;",
+					"}"
+				].join('\n'));
 		}, 0);
 	}, false);
 
