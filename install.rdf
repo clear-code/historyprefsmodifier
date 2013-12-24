@@ -5,7 +5,7 @@
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="historyprefsmodifier@clear-code.com"
                    em:name="History Prefs Modifier"
-                   em:version="0.1"
+                   em:version="1.0"
                    em:description="Allow to modify history preferences by default."
                    em:creator="ClearCode Inc."
                    em:homepageURL="http://www.clear-code.com/">
