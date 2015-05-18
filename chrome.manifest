@@ -3,3 +3,7 @@ content	historyprefsmodifier	content/historyprefsmodifier/
 overlay	chrome://browser/content/preferences/preferences.xul	chrome://historyprefsmodifier/content/preferences.xul
 
 resource historyprefsmodifier-modules modules/
+
+component	{67e5b750-fd26-11e4-b939-0800200c9a66}	components/Startup.js
+contract	@clear-code.com/historyprefsmodifier/startup;1	{67e5b750-fd26-11e4-b939-0800200c9a66}
+category	profile-after-change	HistoryPrefsModifierStartupService	@clear-code.com/historyprefsmodifier/startup;1
