@@ -1,3 +1,5 @@
 content	historyprefsmodifier	content/historyprefsmodifier/
 
 overlay	chrome://browser/content/preferences/preferences.xul	chrome://historyprefsmodifier/content/preferences.xul
+
+resource historyprefsmodifier-modules modules/

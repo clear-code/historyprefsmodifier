@@ -4,6 +4,7 @@
 window.addEventListener('DOMContentLoaded', function() {
 	window.removeEventListener('DOMContentLoaded', arguments.callee, false);
 	window.addEventListener('paneload', function() {
-		historyPrefsModifierUpdateUI();
+		let { historyPrefsModifierUpdateUI } = Components.utils.import('resource://historyprefsmodifier-modules/updateUI.js', {});
+		historyPrefsModifierUpdateUI(window);
 	}, false);
 }, false);

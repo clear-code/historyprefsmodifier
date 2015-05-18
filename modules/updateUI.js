@@ -1,18 +1,20 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-function historyPrefsModifierUpdateUI() {
-  var menulist = document.getElementById('historyMode');
+var EXPORTED_SYMBOLS = ['historyPrefsModifierUpdateUI';
+
+function historyPrefsModifierUpdateUI(aWindow) {
+  var menulist = aWindow.document.getElementById('historyMode');
   if (!menulist) return;
 
-  window.removeEventListener('paneload', arguments.callee, false);
+  aWindow.removeEventListener('paneload', arguments.callee, false);
 
-  window.setTimeout(function() {
+  aWindow.setTimeout(function() {
     menulist.value = 'custom';
-    gPrivacyPane.updateHistoryModePane();
-    gPrivacyPane.updatePrivacyMicroControls();
+    aWindow.gPrivacyPane.updateHistoryModePane();
+    aWindow.gPrivacyPane.updatePrivacyMicroControls();
 
-    var historyDays = document.getElementById('historyDays');
+    var historyDays = aWindow.document.getElementById('historyDays');
     if (historyDays) // for too old Firefox
       historyDays.setAttribute('onsynctopreference', [
         "var historyDays = document.getElementById('historyDays');",
