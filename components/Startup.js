@@ -53,9 +53,9 @@ HistoryPrefsModifierStartupService.prototype = {
       var originalInit = aWindow.gPrivacyPane.init;
       aWindow.gPrivacyPane.init = function(...aArgs) {
         originalInit.apply(this, aArgs);
-		historyPrefsModifierUpdateUI(aWindow);
+        historyPrefsModifierUpdateUI(aWindow);
       };
-	}, false);
+    }, false);
   },
 
   classID : kCID,
