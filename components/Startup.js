@@ -45,7 +45,7 @@ HistoryPrefsModifierStartupService.prototype = {
   },
 
   onChromeLoaded : function(aWindow) {
-    if (this.targetPattern.test(aWindow.location.href))
+    if (!this.targetPattern.test(aWindow.location.href))
       return;
 
     aWindow.addEventListener('DOMContentLoaded', function onDOMContentLoaded() {
