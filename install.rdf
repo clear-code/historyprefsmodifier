@@ -6,6 +6,7 @@
                    em:id="historyprefsmodifier@clear-code.com"
                    em:name="History Prefs Modifier"
                    em:version="1.1"
+                   em:type="2"
                    em:description="Allow to modify history preferences by default."
                    em:creator="ClearCode Inc."
                    em:homepageURL="http://www.clear-code.com/">
