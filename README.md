@@ -1,5 +1,7 @@
 # History Prefs Modifier
 
+**Important note**: This was completely obsolete by a bug [1203531 – Use custom settings for history should not be based on querying prefs](https://bugzilla.mozilla.org/show_bug.cgi?id=1203531) already fixed on Firefox 44. You don't need to use this on Firefox 44 and later.
+
 ## What's this?
 
 If you change some default preferences in the "Privacy" pane via MCD or etc., then you'll expect that the "Firefox will:" list box become "Use custom settings for history". However, Firefox always set the list box to "Remember history" even if some history preferences are turned off.
