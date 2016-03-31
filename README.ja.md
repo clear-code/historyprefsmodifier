@@ -1,5 +1,7 @@
 # History Prefs Modifier
 
+**重要な注意事項**: このアドオンはFirefox 44で修正された[1203531 – Use custom settings for history should not be based on querying prefs](https://bugzilla.mozilla.org/show_bug.cgi?id=1203531)により不要となりました。Firefox 44以降のバージョンではこのアドオンを使う必要はありません。
+
 ## これは何？
 
 MCDなどの方法で「プライバシー」パネルの設定の既定値を変更した場合、設定UI上は「Firefoxに：記憶させる設定を詳細設定する」が選択されている事が期待されます。しかしながら、既定の設定が変更されていても設定ダイアログは常に「Firefoxに：履歴を記憶させる」が選択された状態になってしまいます。
